@@ -11,14 +11,18 @@
 <body>
 
     <header>
-        <nav class="navbar">
+        <nav class="navbar1">
             <p>
                 <img src="../img/nombre1.png" alt="nombre" class="imgnombre">
             </p>
-            <div class="buscador">
-                <input type="search" name="busquedamusica" placeholder="Encuentre su producto">
-                <input type="submit" value="Buscar">
-            </div>
+            <div class="buscador"> 
+                <div class="container-fluid">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Encontrar un producto" aria-label="Search">
+                        <button class="btn btn-outline-success botonbuscador" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>   
                 <ul class="menu">
                     <li><a href="../index.html">INICIO</a></li>
                     <li><a href="./info.html">NOSOTROS</a></li>
