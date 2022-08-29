@@ -6,32 +6,46 @@
     text-decoration: none;
 }
 
-body{
+.container{
     background-color:  rgba(75,43,136,255);
-    margin: 0px;
 }
 
 header{
-    height: 100px;
+    height: 102px;
 }
 
-.navbar1{
+.menu-hamburguesa{
+    color: white;
+}
+
+.contactForm{
+    margin: 15px 0;
+}
+
+.contactForm label{
+    margin: 5px 0;
+    color: white;
+}
+
+.contactForm button{
+    margin-top: 15px;
+}
+
+.navbar{
     display: flex;
     padding-top: 30px;
-    padding-bottom: 15px;
+    padding-bottom: 30px;
+    width: 100%;
     border-bottom: 2px solid white;
     align-items: center;
-    width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
     align-content: center;
     position: fixed;
-    background-color: rgba(75,43,136,255);
-    flex-direction: row;
-    flex-wrap: nowrap;
+    background-color:rgba(75,43,136,255) ;
 }
 
 .imgnombre{
-    height: 25px;
+    height: 20px;
     padding-left: 10px;
 }
 
@@ -45,18 +59,19 @@ header{
     align-content: center;
 }
 
+
 li a{
-    color: white;
-    padding: 10px;
+    text-decoration: none;
+    color: white !important;
+    padding: 10px !important;
     font-size: large;
     font-style: italic;
     border-radius: 10%;
     border: 2px white;
     border-style: outset;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 45px;
+    margin-right: 45px;
     font-weight: bolder;
-    text-decoration: none;
 }
 
 li a:hover{
@@ -67,16 +82,6 @@ li a:hover{
 
 .principalimg{
     text-align: center;
-}
-
-.buscador{
-    margin-bottom: 15px;
-    color: white;
-}
-
-.botonbuscador{
-    color:green;
-    background-color: white;
 }
 
 .fondoproductos{
@@ -117,7 +122,8 @@ li a:hover{
     transition-duration: 0.5s;
 }
 .informacion{
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     grid-template-columns: 1fr 1fr;
     padding: 100px;
     column-gap: 100px;
@@ -166,6 +172,7 @@ li a:hover{
     padding: 20px;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .productocarrito{
@@ -179,24 +186,22 @@ li a:hover{
     padding: 10px;
 }
 
-p a{
+.botoncarrito{
     font-size:50px;
+    padding: 5px;
+    background-color: transparent;
     border: transparent;
     color: white;
-    text-decoration: none;
-    margin: 0;
 }
 
-p a:hover{
+.botoncarrito:hover{
     background-color: white;
     transition-duration: 0.5s;
-    color:rgba(75,43,136,255) ;
 }
 
 .carritocont{
     display: flex;
     padding: 15px;
-    padding-right: 500px;
     color: white;
     border: solid rgb(243, 231, 160);
     border-radius: 10px;
@@ -208,24 +213,15 @@ p a:hover{
     text-align: center;
 }
 
-.mapa{
-    text-align: center;
-}
-
 .footer{
     text-align: center;
 }
 
 @media screen and (max-width: 600px){
     
-    header{
-        height: 180px;
-    }
-    
-    .navbar1{
+    .navbar{
         padding-top: 10px;
-        padding-bottom:0px;
-        margin: 0px;
+        padding-bottom: 10px;
         position: fixed;
         background-color: rgba(75,43,136,255);
         flex-wrap: wrap;
@@ -238,8 +234,8 @@ p a:hover{
 
     .buscador{
         margin-top: 10px;
-        margin-bottom: 0px;
     }
+
     
     li a{
         display: flex;
@@ -251,15 +247,15 @@ p a:hover{
     }
 
     .menu {
+        flex-direction: row;
+        flex-wrap: nowrap;
         margin-top: 20px;
-        justify-content: space-around;
-        padding: 0px;
+        justify-content: space-between;
+        width: 100%;
     }
 
     .logo{
-
-        padding: 0px;
-        margin: 0px;
+        height: 400px;
     }
 
     .textinfo{
@@ -269,26 +265,21 @@ p a:hover{
     
     .informacion{
         display: flex;
-        grid-template-columns: 1fr 1fr;
         padding: 100px;
         column-gap: 100px;
         flex-wrap: wrap;
         justify-content: center;
         align-content: center;
         align-items: center;
-        flex-direction: row;
+        flex-direction: column;
     }
     .imageninfo{
         flex-wrap: wrap;
         height: 300px;
     }
 
-    .informacion{
-        padding: 15px;
-    }
-
     .camiseta {
-        height: 180px
+        height: 150px
     }
 
     .nombrecamiseta{
@@ -296,18 +287,12 @@ p a:hover{
         padding: 5px;
     }
 
-    .carritocont{
+    .fondoproductos{
+        margin-top: 15px;
+    }
+
+    .fondocarrito{
         display: flex;
-        padding: 15px;
-        padding-bottom: 100px;
-        color: white;
-        border: solid rgb(243, 231, 160);
-        border-radius: 10px;
         flex-direction: column;
-        flex-wrap: nowrap;
-        align-content: center;
-        justify-content: space-around;
-        align-items: stretch;
-        text-align: center;
     }
 }
