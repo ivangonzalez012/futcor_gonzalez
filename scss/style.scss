@@ -1,0 +1,265 @@
+$colorprincipal: #4b2b88;
+
+.container{
+    background-color:  $colorprincipal;
+}
+
+header{
+    height: 102px;
+}
+
+.navbar{
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    position: fixed;
+    background-color:$colorprincipal ;
+    
+    .imgnombre{
+        height: 20px;
+        padding-left: 10px;
+    }
+
+    .menu{
+        display: flex;
+        background-color: $colorprincipal;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;
+        align-content: center;
+    }
+    .menu-hamburguesa{
+        color: white;
+    }
+    
+    li {
+        a{
+            text-decoration: none;
+            color: white !important;
+            padding: 10px !important;
+            font-size: large;
+            font-style: italic;
+            border-radius: 10%;
+            border: 2px white;
+            border-style: outset;
+            margin-left: 45px;
+            margin-right: 45px;
+            font-weight: bolder;
+        }
+    }
+    
+}
+.principalimg{
+    text-align: center;
+}
+.fondoproductos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 0.1fr 2fr 0.4fr 2fr 0.4fr ;
+    justify-items: center;
+    
+    .nombrecamiseta{
+        padding: 15px;
+        font-style: italic;
+        border-radius: 50px;
+        border: solid 2px rgb(12, 0, 0);
+        font-weight: bolder;
+        background-color: white;
+    }
+    
+    
+    .camiseta{
+        border: solid transparent;
+        border-radius: 15px;
+    }
+
+    .mas{
+        color: white;
+        background-color: black;
+        padding: 4px;
+        border: 0px;
+        border-radius: 5px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    
+    
+}
+
+
+.informacion{
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr;
+    padding: 100px;
+    column-gap: 100px;
+    
+    .textinfo{
+        font-family: 'Montserrat', sans-serif;
+        font-style: italic;
+        font-size: large;
+        color: rgb(13, 231, 104);
+    }
+    
+    .imageninfo{
+        height: 500px;
+    }
+}
+
+.logocarrito{
+    height: 100px;
+}
+
+.fondocarrito{
+    display: flex;
+    padding: 20px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    .productocarrito{
+        font-size: xx-large;
+        padding: 150px;
+        border:  white;
+        border-style: dotted;
+    }
+    
+    
+    .textcarrito{
+        padding: 10px;
+    }
+    
+    
+    .botoncarrito{
+        font-size:50px;
+        background-color: transparent;
+        border: transparent;
+        color: white !important;
+        text-decoration: none;
+    }
+    
+    
+    .carritocont{
+        display: flex;
+        padding: 15px;
+        color: white;
+        border: solid rgb(243, 231, 160);
+        border-radius: 10px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: space-around;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .mas{
+        color: white;
+        background-color: black;
+        padding: 4px;
+        border: 0px;
+        border-radius: 5px;
+        margin-left: 10px;
+        cursor: pointer;
+    }   
+}
+.contactForm{
+    margin: 15px 0;
+    .contactForm label{
+        margin: 5px 0;
+        color: white;
+    }
+    
+    .contactForm button{
+        margin-top: 15px;
+    }
+    
+}
+.footer{
+    text-align: center;
+}
+
+@media screen and (max-width: 600px){
+    
+    .navbar{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        position: fixed;
+        background-color: $colorprincipal;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .imgnombre{
+        padding-left: 0px;
+    }
+
+    .buscador{
+        margin-top: 10px;
+    }
+
+    
+    li a{
+        display: flex;
+        padding: 10px;
+        font-size: xx-small;
+        margin-left: 5px;
+        margin-right: 5px;
+        text-align: center;
+    }
+
+    .menu {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin-top: 20px;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .logo{
+        height: 400px;
+    }
+
+    .textinfo{
+        font-size: small;
+        margin-bottom: 30px;
+    }
+    
+    .informacion{
+        display: flex;
+        padding: 100px;
+        column-gap: 100px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .imageninfo{
+        flex-wrap: wrap;
+        height: 300px;
+    }
+
+    .camiseta {
+        height: 150px
+    }
+
+    .nombrecamiseta{
+        font-size: xx-small;
+        padding: 5px;
+    }
+
+    .fondoproductos{
+        margin-top: 15px;
+    }
+
+    .fondocarrito{
+        display: flex;
+        flex-direction: column;
+    }
+}
