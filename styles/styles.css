@@ -19,26 +19,29 @@ header {
     padding-left: 10px; }
   .navbar .menu {
     display: flex;
+    justify-content: space-around;
     background-color: #4b2b88;
     flex-direction: row;
-    justify-content: space-around;
     align-items: center;
     flex-wrap: nowrap;
     align-content: center; }
   .navbar .menu-hamburguesa {
     color: white; }
-  .navbar li a {
-    text-decoration: none;
-    color: white !important;
-    padding: 10px !important;
-    font-size: large;
-    font-style: italic;
-    border-radius: 10%;
-    border: 2px white;
-    border-style: outset;
-    margin-left: 45px;
-    margin-right: 45px;
-    font-weight: bolder; }
+  .navbar li {
+    margin-top: 10px; }
+    .navbar li a {
+      text-decoration: none;
+      color: white !important;
+      padding: 10px !important;
+      font-size: large;
+      text-align: center;
+      font-style: italic;
+      border-radius: 10%;
+      border: 2px white;
+      border-style: outset;
+      margin-left: 45px;
+      margin-right: 45px;
+      font-weight: bolder; }
 
 .principalimg {
   text-align: center; }
@@ -71,15 +74,18 @@ header {
   display: flex;
   flex-wrap: wrap;
   grid-template-columns: 1fr 1fr;
-  padding: 100px;
-  column-gap: 100px; }
+  padding: 20px;
+  column-gap: 100px;
+  }
   .informacion .textinfo {
     font-family: 'Montserrat', sans-serif;
     font-style: italic;
     font-size: large;
-    color: #0de768; }
+    color: #0de768;
+    }
   .informacion .imageninfo {
-    height: 500px; }
+    height: 500px; 
+  }
 
 .logocarrito {
   height: 100px; }
@@ -105,6 +111,7 @@ header {
     text-decoration: none; }
   .fondocarrito .carritocont {
     display: flex;
+    justify-content: space-around;
     padding: 15px;
     color: white;
     border: solid #f3e7a0;
@@ -112,7 +119,6 @@ header {
     flex-direction: column;
     flex-wrap: nowrap;
     align-content: center;
-    justify-content: space-around;
     align-items: stretch;
     text-align: center; }
   .fondocarrito .mas {
@@ -132,10 +138,11 @@ header {
   .contactForm .contactForm button {
     margin-top: 15px; }
 
-.footer {
-  text-align: center; }
+footer {
+  text-align: center;
+  color: white; }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .navbar {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -176,7 +183,8 @@ header {
     flex-direction: column; }
   .imageninfo {
     flex-wrap: wrap;
-    height: 300px; }
+    width: 250px;
+    height: 200px !important; }
   .camiseta {
     height: 150px; }
   .nombrecamiseta {

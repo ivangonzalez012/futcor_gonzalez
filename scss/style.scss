@@ -1,7 +1,18 @@
 $colorprincipal: #4b2b88;
 
+@mixin display-around {
+    display: flex;
+    justify-content: space-around;
+  }
+
+$colors: ("firstColor": $colorprincipal, "boxContainer": whitesmoke);
+
+@debug map-get($colors, "firstColor");
+
+  
+
 .container{
-    background-color:  $colorprincipal;
+    background-color: map-get($colors, "firstColor");      
 }
 
 header{
@@ -25,25 +36,26 @@ header{
     }
 
     .menu{
-        display: flex;
+        @include display-around;  
         background-color: $colorprincipal;
         flex-direction: row;
-        justify-content: space-around;
         align-items: center;
         flex-wrap: nowrap;
         align-content: center;
     }
     .menu-hamburguesa{
         color: white;
-    }
+        border-color: transparent;
     
     li {
+        margin-top: 10px;
         a{
             text-decoration: none;
             color: white !important;
             padding: 10px !important;
             font-size: large;
             font-style: italic;
+            text-align: center;
             border-radius: 10%;
             border: 2px white;
             border-style: outset;
@@ -54,9 +66,11 @@ header{
     }
     
 }
+
 .principalimg{
     text-align: center;
 }
+
 .fondoproductos{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -96,8 +110,9 @@ header{
     display: flex;
     flex-wrap: wrap;
     grid-template-columns: 1fr 1fr;
-    padding: 100px;
+    padding: 50px;
     column-gap: 100px;
+    text-align: center;
     
     .textinfo{
         font-family: 'Montserrat', sans-serif;
@@ -108,6 +123,7 @@ header{
     
     .imageninfo{
         height: 500px;
+        text-align: center;
     }
 }
 
@@ -145,7 +161,7 @@ header{
     
     
     .carritocont{
-        display: flex;
+        @include display-around;  
         padding: 15px;
         color: white;
         border: solid rgb(243, 231, 160);
@@ -153,7 +169,6 @@ header{
         flex-direction: column;
         flex-wrap: nowrap;
         align-content: center;
-        justify-content: space-around;
         align-items: stretch;
         text-align: center;
     }
@@ -180,11 +195,12 @@ header{
     }
     
 }
-.footer{
+footer{
     text-align: center;
+    color: #fff;
 }
 
-@media screen and (max-width: 600px){
+@media (max-width: 600px){
     
     .navbar{
         padding-top: 10px;
@@ -242,7 +258,8 @@ header{
     }
     .imageninfo{
         flex-wrap: wrap;
-        height: 300px;
+        width: 250px;
+        height: 200px !important;
     }
 
     .camiseta {
@@ -262,4 +279,5 @@ header{
         display: flex;
         flex-direction: column;
     }
+}
 }
